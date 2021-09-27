@@ -1,0 +1,9 @@
+ul{
+    padding: 0;
+    margin: 0;
+    padding-left: 20px;
+}
+
+li:last-child{
+    margin-left: 35px;
+}
