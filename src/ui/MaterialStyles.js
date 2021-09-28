@@ -219,14 +219,17 @@ export const BlockImgConfidenceStar = styled('img')(({theme}) => ({
         display: 'none'
     },
     [theme.breakpoints.up('sm')]: {
+        display: 'block',
         width: "21px",
         height: "30px",
     },
     [theme.breakpoints.up('md')]: {
+        display: 'block',
         width: "26px",
         height: "35px",
     },
     [theme.breakpoints.up('lg')]: {
+        display: 'block',
         width: "31px",
         height: "40px",
     },
