@@ -611,15 +611,18 @@ export const FooterBlockP = styled('p')(({theme}) => ({
     },
     [theme.breakpoints.up('sm')]: {
         margin: '0px',
-        fontSize: '9px'
+        fontSize: '9px',
+        marginRight: '5px'
     },
     [theme.breakpoints.up('md')]: {
         margin: '0px',
-        fontSize: '11px'
+        fontSize: '11px',
+        marginRight: '5px'
     },
     [theme.breakpoints.up('lg')]: {
         margin: '0px',
-        fontSize: '13px'
+        fontSize: '13px',
+        marginRight: '10px'
     },
 }));
 
@@ -634,19 +637,19 @@ export const FooterBlockPStar = styled('p')(({theme}) => ({
         margin: '0px',
         fontSize: '9px',
         paddingLeft: '40px',
-        flexGrow: 0
+        flexGrow: 1
     },
     [theme.breakpoints.up('md')]: {
         margin: '0px',
         fontSize: '11px',
         paddingLeft: '60px',
-        flexGrow: 0
+        flexGrow: 1
     },
     [theme.breakpoints.up('lg')]: {
         margin: '0px',
         fontSize: '13px',
         paddingLeft: '80px',
-        flexGrow: 0
+        flexGrow: 1
     },
 }));
 
