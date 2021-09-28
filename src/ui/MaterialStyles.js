@@ -105,7 +105,7 @@ export const ButtonRegister = styled('button')(({theme}) => ({
 export const BlockPLi = styled('p')(({theme}) => ({
     [theme.breakpoints.up('xs')]: {
         margin: '0px',
-        fontSize: '8px'
+        fontSize: '12px'
     },
     [theme.breakpoints.up('sm')]: {
         margin: '0px',
@@ -121,29 +121,33 @@ export const BlockPLi = styled('p')(({theme}) => ({
     },
 }));
 
-export const BlockLi = styled('p')(({theme}) => ({
+export const BlockLi = styled('div')(({theme}) => ({
     [theme.breakpoints.up('xs')]: {
         margin: '0px',
-        fontSize: '8px'
+        fontSize: '10px',
+        flexDirection: 'column'
     },
     [theme.breakpoints.up('sm')]: {
         margin: '0px',
-        fontSize: '12px'
+        fontSize: '12px',
+        flexDirection: 'row'
     },
     [theme.breakpoints.up('md')]: {
         margin: '0px',
-        fontSize: '14px'
+        fontSize: '14px',
+        flexDirection: 'row'
     },
     [theme.breakpoints.up('lg')]: {
         margin: '0px',
-        fontSize: '18px'
+        fontSize: '18px',
+        flexDirection: 'row'
     },
 }));
 
 export const BlockPHeader = styled('p')(({theme}) => ({
     [theme.breakpoints.up('xs')]: {
         margin: '0px',
-        fontSize: '20px'
+        fontSize: '22px'
     },
     [theme.breakpoints.up('sm')]: {
         margin: '0px',
@@ -161,31 +165,96 @@ export const BlockPHeader = styled('p')(({theme}) => ({
 
 export const BlockConfidence = styled('div')(({theme}) => ({
     [theme.breakpoints.up('xs')]: {
-        marginTop: '51px',
+        marginTop: '30px',
+        flexDirection: 'column'
     },
     [theme.breakpoints.up('sm')]: {
-        marginTop: '63px',
+        marginTop: '52px',
+        flexDirection: 'row'
     },
     [theme.breakpoints.up('md')]: {
-        marginTop: '75px',
+        marginTop: '74px',
+        flexDirection: 'row'
     },
     [theme.breakpoints.up('lg')]: {
         marginTop: '87px',
+        flexDirection: 'row'
+    },
+}));
+
+export const BlockConfidenceItem = styled('div')(({theme}) => ({
+    [theme.breakpoints.up('xs')]: {
+        flexDirection: 'column',
+        width: '100%',
+    },
+    [theme.breakpoints.up('sm')]: {
+        flexDirection: 'row',
+        width: '0',
+    },
+    [theme.breakpoints.up('md')]: {
+        flexDirection: 'row',
+        width: '0',
+    },
+    [theme.breakpoints.up('lg')]: {
+        flexDirection: 'row',
+        width: '0',
+    },
+}));
+
+export const BlockConfidenceItemSpecifically = styled('div')(({theme}) => ({
+    [theme.breakpoints.up('xs')]: {
+        marginBottom: '10px',
+    },
+    [theme.breakpoints.up('sm')]: {
+        marginBottom: '0',
+
+    },
+    [theme.breakpoints.up('md')]: {
+        marginBottom: '0',
+
+    },
+    [theme.breakpoints.up('lg')]: {
+        marginBottom: '0',
+
+    },
+}));
+
+export const BlockPConfidenceHeader = styled('p')(({theme}) => ({
+    [theme.breakpoints.up('xs')]: {
+        margin: '0px',
+        marginBottom: '15px',
+        fontSize: '14px',
+        borderBottom: '1px solid #d7d7d7'
+    },
+    [theme.breakpoints.up('sm')]: {
+        margin: '0px',
+        fontSize: '10px',
+        border: 0
+    },
+    [theme.breakpoints.up('md')]: {
+        margin: '0px',
+        fontSize: '12px',
+        border: 0
+    },
+    [theme.breakpoints.up('lg')]: {
+        margin: '0px',
+        fontSize: '14px',
+        border: 0
     },
 }));
 
 export const BlockPConfidence = styled('p')(({theme}) => ({
     [theme.breakpoints.up('xs')]: {
         margin: '0px',
-        fontSize: '6px'
+        fontSize: '12px'
     },
     [theme.breakpoints.up('sm')]: {
         margin: '0px',
-        fontSize: '8px'
+        fontSize: '10px'
     },
     [theme.breakpoints.up('md')]: {
         margin: '0px',
-        fontSize: '10px'
+        fontSize: '12px'
     },
     [theme.breakpoints.up('lg')]: {
         margin: '0px',
@@ -195,7 +264,9 @@ export const BlockPConfidence = styled('p')(({theme}) => ({
 
 export const BlockImgConfidence = styled('img')(({theme}) => ({
     [theme.breakpoints.up('xs')]: {
-        display: 'none'
+        display: 'block',
+        width: "35px",
+        height: "35px",
     },
     [theme.breakpoints.up('sm')]: {
         display: 'block',
@@ -216,7 +287,10 @@ export const BlockImgConfidence = styled('img')(({theme}) => ({
 
 export const BlockImgConfidenceStar = styled('img')(({theme}) => ({
     [theme.breakpoints.up('xs')]: {
-        display: 'none'
+        display: 'block',
+        width: "26px",
+        height: "35px",
+        marginRight: '10px'
     },
     [theme.breakpoints.up('sm')]: {
         display: 'block',
@@ -238,7 +312,7 @@ export const BlockImgConfidenceStar = styled('img')(({theme}) => ({
 export const BlockPConfidenceUp = styled('p')(({theme}) => ({
     [theme.breakpoints.up('xs')]: {
         margin: '0px',
-        fontSize: '14px'
+        fontSize: '16px'
     },
     [theme.breakpoints.up('sm')]: {
         margin: '0px',
@@ -256,16 +330,35 @@ export const BlockPConfidenceUp = styled('p')(({theme}) => ({
 
 export const BlockService = styled('div')(({theme}) => ({
     [theme.breakpoints.up('xs')]: {
-        marginTop: '48px',
+        marginTop: '28px',
     },
     [theme.breakpoints.up('sm')]: {
-        marginTop: '60px',
+        marginTop: '50px',
     },
     [theme.breakpoints.up('md')]: {
-        marginTop: '72px',
+        marginTop: '62px',
     },
     [theme.breakpoints.up('lg')]: {
         marginTop: '84px',
+    },
+}));
+
+export const BlockDivService = styled('div')(({theme}) => ({
+    [theme.breakpoints.up('xs')]: {
+        flexDirection: 'column',
+        marginTop: '16px'
+    },
+    [theme.breakpoints.up('sm')]: {
+        flexDirection: 'row',
+        marginTop: '28px'
+    },
+    [theme.breakpoints.up('md')]: {
+        flexDirection: 'row',
+        marginTop: '40px'
+    },
+    [theme.breakpoints.up('lg')]: {
+        flexDirection: 'row',
+        marginTop: '52px'
     },
 }));
 
@@ -287,7 +380,7 @@ export const BlockDivServiceItem = styled('div')(({theme}) => ({
 export const BlockPService = styled('p')(({theme}) => ({
     [theme.breakpoints.up('xs')]: {
         margin: '0px',
-        fontSize: '24px'
+        fontSize: '26px'
     },
     [theme.breakpoints.up('sm')]: {
         margin: '0px',
@@ -306,7 +399,7 @@ export const BlockPService = styled('p')(({theme}) => ({
 export const BlockPServiceItem = styled('p')(({theme}) => ({
     [theme.breakpoints.up('xs')]: {
         margin: '0px',
-        fontSize: '10px'
+        fontSize: '14px'
     },
     [theme.breakpoints.up('sm')]: {
         margin: '0px',
@@ -325,7 +418,8 @@ export const BlockPServiceItem = styled('p')(({theme}) => ({
 export const BlockPServiceItemAbove = styled('p')(({theme}) => ({
     [theme.breakpoints.up('xs')]: {
         margin: '0px',
-        fontSize: '8px'
+        marginBottom: '10px',
+        fontSize: '12px',
     },
     [theme.breakpoints.up('sm')]: {
         margin: '0px',
@@ -343,13 +437,13 @@ export const BlockPServiceItemAbove = styled('p')(({theme}) => ({
 
 export const GreenBlock = styled('div')(({theme}) => ({
     [theme.breakpoints.up('xs')]: {
-        marginTop: '49px',
+        marginTop: '29px',
     },
     [theme.breakpoints.up('sm')]: {
-        marginTop: '61px',
+        marginTop: '41px',
     },
     [theme.breakpoints.up('md')]: {
-        marginTop: '73px',
+        marginTop: '63px',
     },
     [theme.breakpoints.up('lg')]: {
         marginTop: '85px',
@@ -374,7 +468,7 @@ export const GreenBlockDiv = styled('div')(({theme}) => ({
 export const GreenBlockPHeader = styled('p')(({theme}) => ({
     [theme.breakpoints.up('xs')]: {
         margin: '0px',
-        fontSize: '16px'
+        fontSize: '20px'
     },
     [theme.breakpoints.up('sm')]: {
         margin: '0px',
@@ -392,8 +486,8 @@ export const GreenBlockPHeader = styled('p')(({theme}) => ({
 
 export const GreenBlockImgHeader = styled('img')(({theme}) => ({
     [theme.breakpoints.up('xs')]: {
-        width: "30px",
-        height: "29px",
+        width: "35px",
+        height: "34px",
     },
     [theme.breakpoints.up('sm')]: {
         width: "35px",
@@ -412,7 +506,7 @@ export const GreenBlockImgHeader = styled('img')(({theme}) => ({
 export const GreenBlockPText = styled('p')(({theme}) => ({
     [theme.breakpoints.up('xs')]: {
         margin: '0px',
-        fontSize: '14px'
+        fontSize: '16px',
     },
     [theme.breakpoints.up('sm')]: {
         margin: '0px',
@@ -431,7 +525,7 @@ export const GreenBlockPText = styled('p')(({theme}) => ({
 export const GreenBlockPTextUser = styled('p')(({theme}) => ({
     [theme.breakpoints.down('md')]: {
         margin: '0px',
-        fontSize: '10px'
+        fontSize: '12px'
     },
     [theme.breakpoints.up('md')]: {
         margin: '0px',
@@ -460,8 +554,8 @@ export const GreenBlockUser = styled('div')(({theme}) => ({
 
 export const GreenBlockImgTextUser = styled('img')(({theme}) => ({
     [theme.breakpoints.down('md')]: {
-        width: "30px",
-        height: "30px",
+        width: "35px",
+        height: "35px",
     },
     [theme.breakpoints.up('md')]: {
         width: "35px",
@@ -475,13 +569,13 @@ export const GreenBlockImgTextUser = styled('img')(({theme}) => ({
 
 export const BlockRegistration = styled('div')(({theme}) => ({
     [theme.breakpoints.up('xs')]: {
-        height: '175px',
+        height: '136px',
     },
     [theme.breakpoints.up('sm')]: {
-        height: '202px',
+        height: '171px',
     },
     [theme.breakpoints.up('md')]: {
-        height: '233px',
+        height: '214px',
     },
     [theme.breakpoints.up('lg')]: {
         height: '268px',
@@ -512,7 +606,8 @@ export const BlockPRegistration = styled('p')(({theme}) => ({
 export const FooterBlockP = styled('p')(({theme}) => ({
     [theme.breakpoints.up('xs')]: {
         margin: '0px',
-        fontSize: '6px'
+        fontSize: '12px',
+        marginBottom: '5px'
     },
     [theme.breakpoints.up('sm')]: {
         margin: '0px',
@@ -531,37 +626,50 @@ export const FooterBlockP = styled('p')(({theme}) => ({
 export const FooterBlockPStar = styled('p')(({theme}) => ({
     [theme.breakpoints.up('xs')]: {
         margin: '0px',
-        fontSize: '6px',
-        paddingLeft: '20px'
+        fontSize: '12px',
+        flexGrow: 0,
+        marginBottom: '5px'
     },
     [theme.breakpoints.up('sm')]: {
         margin: '0px',
         fontSize: '9px',
-        paddingLeft: '40px'
+        paddingLeft: '40px',
+        flexGrow: 0
     },
     [theme.breakpoints.up('md')]: {
         margin: '0px',
         fontSize: '11px',
-        paddingLeft: '60px'
+        paddingLeft: '60px',
+        flexGrow: 0
     },
     [theme.breakpoints.up('lg')]: {
         margin: '0px',
         fontSize: '13px',
-        paddingLeft: '80px'
+        paddingLeft: '80px',
+        flexGrow: 0
     },
 }));
 
 export const FooterBlock = styled('div')(({theme}) => ({
     [theme.breakpoints.up('xs')]: {
         height: '82px',
+        alignItems: 'center',
+        flexDirection: 'column',
+        justifyContent: 'center'
     },
     [theme.breakpoints.up('sm')]: {
         height: '94px',
+        alignItems: 'center',
+        flexDirection: 'row'
     },
     [theme.breakpoints.up('md')]: {
         height: '108px',
+        alignItems: 'center',
+        flexDirection: 'row'
     },
     [theme.breakpoints.up('lg')]: {
         height: '124px',
+        alignItems: 'center',
+        flexDirection: 'row'
     },
 }));

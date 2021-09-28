@@ -1,57 +1,71 @@
 import React from 'react';
 import {
-    BlockConfidence, BlockDivServiceItem,
+    BlockConfidence,
+    BlockConfidenceItem,
+    BlockConfidenceItemSpecifically,
+    BlockDivService,
+    BlockDivServiceItem,
     BlockImgConfidence,
     BlockImgConfidenceStar,
     BlockLi,
     BlockPConfidence,
-    BlockPConfidenceUp, BlockPHeader,
-    BlockPLi, BlockPRegistration,
+    BlockPConfidenceHeader,
+    BlockPConfidenceUp,
+    BlockPHeader,
+    BlockPLi,
+    BlockPRegistration,
     BlockPService,
     BlockPServiceItem,
-    BlockPServiceItemAbove, BlockRegistration,
+    BlockPServiceItemAbove,
+    BlockRegistration,
     BlockService,
     ButtonRegister,
-    GreenBlock, GreenBlockDiv,
+    GreenBlock,
+    GreenBlockDiv,
     GreenBlockImgHeader,
     GreenBlockImgTextUser,
     GreenBlockPHeader,
     GreenBlockPText,
-    GreenBlockPTextUser, GreenBlockUser
+    GreenBlockPTextUser,
+    GreenBlockUser
 } from '../../ui/MaterialStyles';
-import {Box, Container, Typography} from "@material-ui/core";
+import {Box, Container, Typography, useMediaQuery} from "@material-ui/core";
 
 import './content.css'
 
 const Content = () => {
+    const matches = useMediaQuery('(min-width:600px)');
+
     return (
         <>
             <Container sx={{m: '0 auto', mt: '72px'}}>
                 <Typography sx={{color: '#14a800', fontSize: '40px', fontWeight: '800', lineHeight: 'normal'}}>
-                    <BlockPHeader>
-                        Сервис для подготовки закупочных <br/>процедур по 44 и 223 ФЗ
-                    </BlockPHeader>
+                    {matches === true ?
+                        <BlockPHeader>
+                            Сервис для подготовки закупочных <br/>процедур по 44 и 223 ФЗ
+                        </BlockPHeader> :
+                        <BlockPHeader>
+                            Сервис для подготовки закупочных процедур по 44 и 223 ФЗ
+                        </BlockPHeader>
+                    }
                 </Typography>
                 <ul>
-                    <BlockLi>
-                        <Box sx={{display: 'flex'}}>
-                            <li>
-                                <Typography sx={{fontSize: '18px'}}>
-                                    <BlockPLi>
-                                        Сотни готовых технических заданий
-                                    </BlockPLi>
-                                </Typography>
-                            </li>
-                            <li>
-                                <Typography sx={{fontSize: '18px'}}>
-                                    <BlockPLi>
-                                        Подбор ОКПД2 и КТРУ
-                                    </BlockPLi>
-                                </Typography>
-                            </li>
-                        </Box>
+                    <BlockLi sx={{display: 'flex'}}>
+                        <li>
+                            <Typography sx={{fontSize: '18px'}}>
+                                <BlockPLi>
+                                    Сотни готовых технических заданий
+                                </BlockPLi>
+                            </Typography>
+                        </li>
+                        <li>
+                            <Typography sx={{fontSize: '18px'}}>
+                                <BlockPLi>
+                                    Подбор ОКПД2 и КТРУ
+                                </BlockPLi>
+                            </Typography>
+                        </li>
                     </BlockLi>
-
                 </ul>
                 <ButtonRegister sx={{
                     p: '0',
@@ -83,12 +97,12 @@ const Content = () => {
                             fontSize: '14px',
                             mr: '18px'
                         }}>
-                        <BlockPConfidence>
+                        <BlockPConfidenceHeader>
                             Нам доверяют
-                        </BlockPConfidence>
+                        </BlockPConfidenceHeader>
                     </Typography>
-                    <Box sx={{display: 'flex', flexGrow: 1, justifyContent: 'space-between'}}>
-                        <Box sx={{display: 'flex', alignItems: 'center'}}>
+                    <BlockConfidenceItem sx={{display: 'flex', flexGrow: 1, justifyContent: 'space-between'}}>
+                        <BlockConfidenceItemSpecifically sx={{display: 'flex', alignItems: 'center'}}>
                             <BlockImgConfidence
                                 width="40px"
                                 height="40px"
@@ -97,12 +111,17 @@ const Content = () => {
                             />
                             <Typography
                                 sx={{color: 'black', fontSize: '14px', fontWeight: '800', ml: '10px'}}>
-                                <BlockPConfidence>
-                                    Высшая Школа <br/>Экономики
-                                </BlockPConfidence>
+                                {matches === true ?
+                                    <BlockPConfidence>
+                                        Высшая Школа <br/>Экономики
+                                    </BlockPConfidence> :
+                                    <BlockPConfidence>
+                                        Высшая Школа Экономики
+                                    </BlockPConfidence>
+                                }
                             </Typography>
-                        </Box>
-                        <Box sx={{display: 'flex', alignItems: 'center'}}>
+                        </BlockConfidenceItemSpecifically>
+                        <BlockConfidenceItemSpecifically sx={{display: 'flex', alignItems: 'center'}}>
                             <BlockImgConfidence
                                 width="40px"
                                 height="40px"
@@ -115,8 +134,8 @@ const Content = () => {
                                     ГРАНТ
                                 </BlockPConfidenceUp>
                             </Typography>
-                        </Box>
-                        <Box sx={{display: 'flex', alignItems: 'center'}}>
+                        </BlockConfidenceItemSpecifically>
+                        <BlockConfidenceItemSpecifically sx={{display: 'flex', alignItems: 'center'}}>
                             <BlockImgConfidence
                                 width="40px"
                                 height="40px"
@@ -129,8 +148,8 @@ const Content = () => {
                                     МГУ
                                 </BlockPConfidenceUp>
                             </Typography>
-                        </Box>
-                        <Box sx={{display: 'flex', alignItems: 'center'}}>
+                        </BlockConfidenceItemSpecifically>
+                        <BlockConfidenceItemSpecifically sx={{display: 'flex', alignItems: 'center'}}>
                             <BlockImgConfidence
                                 width="40px"
                                 height="40px"
@@ -143,8 +162,8 @@ const Content = () => {
                                     Дарвиновский Музей
                                 </BlockPConfidence>
                             </Typography>
-                        </Box>
-                        <Box sx={{display: 'flex', alignItems: 'center'}}>
+                        </BlockConfidenceItemSpecifically>
+                        <BlockConfidenceItemSpecifically sx={{display: 'flex', alignItems: 'center'}}>
                             <BlockImgConfidenceStar
                                 width="31px"
                                 height="40px"
@@ -153,12 +172,17 @@ const Content = () => {
                             />
                             <Typography
                                 sx={{color: 'black', fontSize: '14px', fontWeight: '800', ml: '10px'}}>
-                                <BlockPConfidence>
-                                    Санкт-Петербургский <br/>горный университет
-                                </BlockPConfidence>
+                                {matches === true ?
+                                    <BlockPConfidence>
+                                        Санкт-Петербургский <br/>горный университет
+                                    </BlockPConfidence> :
+                                    <BlockPConfidence>
+                                        Санкт-Петербургский горный университет
+                                    </BlockPConfidence>
+                                }
                             </Typography>
-                        </Box>
-                    </Box>
+                        </BlockConfidenceItemSpecifically>
+                    </BlockConfidenceItem>
                 </BlockConfidence>
                 <BlockService>
                     <Typography sx={{color: 'black', fontSize: '40px', fontWeight: '800'}}>
@@ -171,7 +195,7 @@ const Content = () => {
                             Скачивайте готовые технические задания по 44-ФЗ и 223-ФЗ в один клик.
                         </BlockPServiceItem>
                     </Typography>
-                    <Box sx={{display: 'flex', justifyContent: 'space-between', mt: '52px'}}>
+                    <BlockDivService sx={{display: 'flex', justifyContent: 'space-between', mt: '52px'}}>
                         <BlockDivServiceItem sx={{mr: '20px'}}>
                             <Typography sx={{color: 'black', fontSize: '18px', fontWeight: '800'}}>
                                 <BlockPServiceItem>
@@ -226,7 +250,7 @@ const Content = () => {
                                 </BlockPServiceItemAbove>
                             </Typography>
                         </BlockDivServiceItem>
-                    </Box>
+                    </BlockDivService>
                 </BlockService>
             </Container>
             <GreenBlock sx={{mt: '85px', bgcolor: '#13544e'}}>
@@ -253,7 +277,7 @@ const Content = () => {
                             госзакупок. Сервис позволяет экономить десятки часов на каждую закупку."
                         </GreenBlockPText>
                     </Typography>
-                    <GreenBlockUser sx={{display: 'flex', mt: '60px', pb: '36px'}}>
+                    <GreenBlockUser sx={{display: 'flex', alignItems: 'center', mt: '60px', pb: '36px'}}>
                         <GreenBlockImgTextUser
                             styles={{borderRadius: '20px'}}
                             width="40px"

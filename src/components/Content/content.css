@@ -7,3 +7,9 @@ ul{
 li:last-child{
     margin-left: 35px;
 }
+
+@media(max-width: 599px){
+    li:last-child{
+        margin-left: 0;
+    }
+}
