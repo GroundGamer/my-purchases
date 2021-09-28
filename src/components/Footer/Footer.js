@@ -4,7 +4,9 @@ import {Box, Container, Typography} from "@material-ui/core";
 
 const Footer = () => {
     return (
-        <Box sx={{display: 'flex', alignItems: 'center', m: '0 auto', bgcolor: '#001e00'}}>
+        <Box sx={{
+            display: 'flex', alignItems: 'center', m: '0 auto', bgcolor: '#001e00', width: '100%'
+        }}>
             <Container sx={{m: '0 auto'}}>
                 <FooterBlock sx={{display: 'flex', alignItems: 'center'}}>
                     <Typography
